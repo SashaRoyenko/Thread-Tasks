@@ -5,7 +5,6 @@ import java.util.concurrent.BlockingQueue;
 public class Consumer implements Runnable {
 
   private final BlockingQueue<Integer> list;
-  private int capacity;
 
   public Consumer(BlockingQueue<Integer> list) {
     this.list = list;
