@@ -25,9 +25,9 @@ public class Writer implements Runnable {
     }
     System.out.println("Thread " + Thread.currentThread().getName() + " has FINISHED WRITING");
 
-    if (reentrantLock.isHeldByCurrentThread()) {
+//    if (reentrantLock.isHeldByCurrentThread()) {
       reentrantLock.unlock();
-    }
+//    }
 
   }
 }

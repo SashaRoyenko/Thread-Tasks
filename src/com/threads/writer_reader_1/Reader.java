@@ -38,7 +38,7 @@ public class Reader implements Runnable {
     reentrantLock1.lock();
     readers--;
     if (readers == 0) {
-      if(reentrantLock2.isLocked()){
+      while (reentrantLock2.isLocked()) {
         if (reentrantLock2.isHeldByCurrentThread()) {
           reentrantLock2.unlock();
         }

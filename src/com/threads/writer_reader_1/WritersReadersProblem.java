@@ -13,6 +13,7 @@ public class WritersReadersProblem {
 
     Writer writer = new Writer(reentrantLock2);
     Reader reader = new Reader(reentrantLock1, reentrantLock2);
+
     for (int i = 0; i < Config.writersCount; i++) {
       new Thread(writer).start();
     }
